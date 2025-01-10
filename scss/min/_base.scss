@@ -1,0 +1,59 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+body {
+  font-family: $font-main;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 400;
+  color: $color-text;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.wrapper-full {
+  max-width: 1262px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section-title {
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 42px;
+  position: relative;
+  padding-bottom: 10px;
+
+  &::after {
+    display: block;
+    content: "";
+    width: 253px;
+    height: 3px;
+    background-color: $color-primary;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+}

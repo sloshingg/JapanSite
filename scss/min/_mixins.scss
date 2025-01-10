@@ -1,0 +1,14 @@
+@mixin transition($time: 0.2s, $type: linear) {
+    transition: #{$time} #{$type};
+    -webkit-transition: #{$time} #{$type};
+    -o-transition: #{$time} #{$type};
+}  
+@mixin visually-hidden {
+    position: absolute !important;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+    overflow: hidden;
+    padding: 0;
+    border: 0;
+}  
